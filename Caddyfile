@@ -1,0 +1,11 @@
+:9999 {
+  handle /retsuko-backend {
+    uri replace /retsuko-backend /health
+    reverse_proxy localhost:3401
+  }
+
+  handle /retsuko-worker {
+    uri replace /retsuko-worker /health
+    reverse_proxy localhost:3405
+  }
+}
