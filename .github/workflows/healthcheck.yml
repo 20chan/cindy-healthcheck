@@ -1,8 +1,9 @@
 name: cindy healthcheck
 on:
+  workflow_dispatch:
   schedule:
     - cron: '*/15 * * * *'
-  workflow_dispatch
+
 jobs:
   healthcheck:
     runs-on: ubuntu-latest
