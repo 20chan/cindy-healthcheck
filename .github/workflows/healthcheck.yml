@@ -16,5 +16,6 @@ jobs:
         env:
           DISCORD_WEBHOOK: ${{ secrets.DISCORD_WEBHOOK }}
         uses: Ilshidur/action-discord@master
+        if: failure()
         with:
           args: 'Healthcheck failed'
